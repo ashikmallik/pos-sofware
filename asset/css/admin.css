@@ -1,0 +1,23 @@
+/* 
+    Document   : admin
+    Created on : Jul 3, 2014, 2:49:31 AM
+    Author     : BSTL
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+.UserViewDiv{ width:auto; min-width: 300px; height: auto; min-height: 200px; float: left;}
+.TableDataHint{ font-size: 15px; font-family: serif; text-align: left; margin-top: 20px;  font-weight: bold;}
+.margins{ margin:5px}
+.with50{ width:90px;}
+.input300{ width: auto; min-width:140px !important; max-width: 300px !important; float: left; margin-right:20px;}
+.level120{ width: auto; min-width:120px !important; max-width: 120px !important; float: left;}
+.middlebar{ width: 5px; height: auto; min-height: 100px; max-height:300px; }

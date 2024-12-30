@@ -1,0 +1,137 @@
+body {
+    margin-top:20mm;
+    font-size: 9pt;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.contain{
+    height:297mm;
+    margin-right: 4mm;
+    margin-left: 4mm;
+}
+p {
+    margin: 0pt;
+}
+table.items {
+    border: 0.1mm solid #000000;
+}
+
+th tr td {
+    vertical-align: top;
+    background-color: #eaecef;
+    border: 1px solid #ddd;
+}
+tbody tr td {
+    vertical-align: top;
+    background-color: #eaecef;
+    border: 1px solid #cfcfcf;
+}
+.items td {
+    border: 1.4mm solid #FFFFFF;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 15px;
+}
+table thead td {
+    text-align: center;
+}
+.header{
+    margin-top:2mm;
+    /*margin-left:5.2mm;*/
+    weight:209mm;
+    height:auto;
+
+}
+.tokenHeader{
+    height:20mm;
+    margin-top:5mm;
+}
+.contact{
+    height:22mm;
+    weight:auto;
+}
+.toUser{
+}
+
+.heading{
+    display:block;
+}
+.text-bold{
+    font-weight: bold;
+}
+.bg-grey{
+    background-color: #dddddd;
+    color: #fff;
+}
+.pan{
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+
+.toUser{
+    margin-bottom:10px;
+}
+
+.items{
+    margin-top:-3px;
+}
+.items tbody tr td {
+    border: 1px solid #fff;
+    vertical-align:middle;
+    font-size:9pt;
+    padding:2px;
+
+}
+.items thead tr td {
+    border: 1px solid #fff;
+    vertical-align:middle;
+    font-size:10pt;
+    padding:3px;
+    font-weight: bold;
+}
+.leftAlign{
+    float:left;
+    text-align:left;
+}
+.rightAlign{
+    float:right;
+    text-align:right;
+}
+
+.totalSection{
+    width:100%;
+    display:inline-block;
+    margin-top:3px;
+}
+
+.total{
+    display:inline-block;
+
+    text-align:center;
+    background-color:#ccc;
+    display:inline-block;
+    color:#000;
+    padding:5px;
+}
+.inWord{
+    text-align:left;
+    display:block;
+    color:black;
+    padding-top:5px;
+}
+
+.footerImage{
+    height:12mm;
+    weight:auto;
+}
+
+.tokenContent{
+    border-right: 1px dotted #000;
+}
+.tokenContent p{
+    border-bottom:1px dotted #9d9d9d;
+    padding-top:5px;
+    margin-bottom:3px;
+    height:2mm;
+}

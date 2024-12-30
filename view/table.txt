@@ -1,0 +1,57 @@
+<div class="col-md-12" style="margin-top: 30px;">
+    <h4><strong>Purchase Item Details</strong></h4>
+    <div class="table-responsive">
+       <!-- Search Bar -->
+<div class="row mb-3">
+    <div class="col-md-4">
+        <input type="text" id="tableSearch" class="form-control" placeholder="Search table data...">
+    </div>
+</div>
+<br></br>
+<!-- Table -->
+<table class="table table-bordered table-hover table-striped" id="datatable">
+    <thead class="bg-teal-800">
+        <tr>
+            <th class="text-center col-md-1">SL</th>
+            <th class="text-center col-md-2">Bill ID</th>
+            <th class="text-center col-md-2">Product Name</th>
+            <th class="text-center col-md-1">Total Qty</th>
+            <th class="text-center col-md-1">Total Price</th>
+            <th class="text-center col-md-1">Commission (Per unit)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+       $j = 1; // Serial Number
+foreach ($allPurchaseData as $purchase) {
+   // var_dump($purchase);
+    $billId = $purchase['bill_id'];  
+    $purchaseDetails = $obj->details_by_cond("tbl_purchase", "bill_id = $billId");
+            $productData2= $obj->details_by_cond("vw_purchase_item", "bill_id = $billId");
+            // var_dump($productData2);
+
+    if (!empty($purchase)) {
+            ?>
+            <tr>
+                <td class="text-center"><?php echo $j; ?></td>
+                <td class="text-center"><?php echo $billId; ?></td>
+                <td class="text-center"><?php echo isset($productData2['product_name']) ? $productData2['product_name'] : 'N/A'; ?></td>
+                <td class="text-center"><?php echo isset($purchaseDetails['total_qty']) ? $purchaseDetails['total_qty'] : '0'; ?></td>
+                <td class="text-center"><?php echo isset($purchaseDetails['total_price']) ? number_format($purchaseDetails['total_price'], 2) . ' TK.' : '0 TK.'; ?></td>
+                <td class="text-center"><?php echo isset($purchaseDetails['commission_per_unit']) ? number_format($purchaseDetails['commission_per_unit'], 2) . ' TK.' : '0 TK.'; ?></td>
+            </tr>
+            <?php
+        
+    } else {
+        echo "<tr><td colspan='7' class='text-center'>No data found for Bill ID: $billId</td></tr>";
+    }
+    $j++;
+}
+        ?>
+    </tbody>
+</table>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
